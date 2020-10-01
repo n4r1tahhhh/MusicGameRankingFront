@@ -50,6 +50,26 @@ export default {
           title: 'Welcome',
           to: '/',
         },
+        {
+          icon: 'mdi-apps',
+          title: 'Users',
+          to: '/users/new',
+        },
+        {
+          icon: 'mdi-apps',
+          title: 'Competitions',
+          to: '/competitions/new',
+        },
+        {
+          icon: 'mdi-apps',
+          title: 'Challenges',
+          to: '/challenges/new',
+        },
+        {
+          icon: 'mdi-apps',
+          title: 'Submissions',
+          to: '/submissions/new',
+        },
       ],
       miniVariant: false,
       title: 'Vuetify.js',
