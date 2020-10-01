@@ -65,4 +65,11 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
+
+  // デフォルトでホットリロードが効かない(原因不明)ので有効にする
+  watchers: {
+    webpack: {
+      poll: true
+    }
+  }
 }
