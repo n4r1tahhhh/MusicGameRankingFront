@@ -15,7 +15,7 @@ export default {
 
   // コンテナ内でNuxtを動かす時に必要
   server: {
-    host: '0.0.0.0'
+    host: '0.0.0.0',
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -69,7 +69,7 @@ export default {
   // デフォルトでホットリロードが効かない(原因不明)ので有効にする
   watchers: {
     webpack: {
-      poll: true
-    }
-  }
+      poll: true,
+    },
+  },
 }
