@@ -10,6 +10,8 @@
 import axios from '~/plugins/axios'
 import inputForm from '~/components/inputForm'
 
+const created = 201
+
 export default {
   components: { inputForm },
   data() {
@@ -24,7 +26,7 @@ export default {
       params.append('name', this.name)
       // post and redirect
       const res = await axios.post('/competitions', params)
-      if (res.status === 201) {
+      if (res.status === created) {
         this.clear()
         this.$router.push('/competitions')
       }
