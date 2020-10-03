@@ -4,9 +4,15 @@ export const state = () => ({
   data: {},
 })
 
-export const actions = {
-  async fetchData() {
-    const res = await axios.get('/users')
+export const mutations = {
+  setData(state, res) {
     state.data = res.data
+  },
+}
+
+export const actions = {
+  async fetchData({ commit }) {
+    const res = await axios.get('/users')
+    commit('setData', res)
   },
 }

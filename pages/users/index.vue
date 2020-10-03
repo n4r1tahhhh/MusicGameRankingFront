@@ -1,17 +1,17 @@
 <template>
-  <sampleCard title="All Users">
-    <div v-for="user in $store.state.user.data" :key="user.name">
-      {{ user.name }}
-      {{ user.email }}
+  <simpleCard title="All Users">
+    <div v-for="user in $store.state.user.data" :key="user.Name">
+      {{ user.Name }}
+      {{ user.Email }}
     </div>
-  </sampleCard>
+  </simpleCard>
 </template>
 
 <script>
 import simpleCard from '~/components/simpleCard'
 
 export default {
-  components: [simpleCard],
+  components: { simpleCard },
   beforeCreate() {
     this.$store.dispatch('user/fetchData')
   },

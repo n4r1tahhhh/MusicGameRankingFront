@@ -17,7 +17,7 @@ import axios from '~/plugins/axios'
 import inputForm from '~/components/inputForm'
 
 export default {
-  components: [inputForm],
+  components: { inputForm },
   data() {
     return {
       name: '',
@@ -34,7 +34,7 @@ export default {
       params.append('password', this.password)
       // post and redirect
       const res = await axios.post('/users', params)
-      if (res.status === 200) {
+      if (res.status === 201) {
         this.clear()
         this.$router.push('/users')
       }
