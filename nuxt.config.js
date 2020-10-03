@@ -13,6 +13,11 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
+  // コンテナ内でNuxtを動かす時に必要
+  server: {
+    host: '0.0.0.0',
+  },
+
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [],
 
@@ -43,7 +48,7 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      dark: false,
       themes: {
         dark: {
           primary: colors.blue.darken2,
@@ -60,4 +65,11 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
+
+  // デフォルトでホットリロードが効かない(原因不明)ので有効にする
+  watchers: {
+    webpack: {
+      poll: true,
+    },
+  },
 }
